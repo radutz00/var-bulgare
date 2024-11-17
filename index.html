@@ -27,6 +27,7 @@
             margin: 0 15px;
             text-decoration: none;
             color: #4e342e;
+            cursor: pointer;
         }
         .hero {
             background-image: url('placeholder.jpg'); /* Poti adauga o imagine aici */
@@ -53,6 +54,32 @@
             bottom: 0;
             width: 100%;
         }
+        /* Stiluri pentru meniul derulant (accordion) */
+        .accordion {
+            background-color: #8d6e63;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            transition: 0.4s;
+        }
+        .accordion:hover {
+            background-color: #6d4c41;
+        }
+        .active, .accordion:active {
+            background-color: #6d4c41;
+        }
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: #f5f5f5;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
         .review-form {
             background-color: #fff;
             padding: 15px;
@@ -71,24 +98,24 @@
         <h1>BIG-MIC - Var Traditional</h1>
     </header>
     <nav>
-        <a href="#despre">Despre Noi</a>
-        <a href="#produse">Produse</a>
-        <a href="#recenzii">Recenzii</a>
-        <a href="#contact">Contact</a>
+        <a href="javascript:void(0)" class="accordion">Despre Noi</a>
+        <a href="javascript:void(0)" class="accordion">Produse</a>
+        <a href="javascript:void(0)" class="accordion">Recenzii</a>
+        <a href="javascript:void(0)" class="accordion">Contact</a>
     </nav>
     <div class="hero">
         <h2>Calitate si Traditie in Productia de Var</h2>
     </div>
 
     <!-- Despre Noi -->
-    <section id="despre">
+    <section id="despre" class="panel">
         <h2>Despre Noi</h2>
         <p>Suntem o fabrica traditionala de producere a varului bulgare si pasta, dedicata calitatii si autenticitatii.</p>
         <p>Varul nostru bulgare este obtinut traditional in cuptor pe lemne, iar varul pasta este perfect pentru aplicatii versatile.</p>
     </section>
 
     <!-- Produse -->
-    <section id="produse">
+    <section id="produse" class="panel">
         <h2>Produse</h2>
         <ul>
             <li>Var Bulgare - Ideal pentru constructii, dezinfectat fantani, corectarea Ph sol, curatat si dezinfectat cotete animale, reducerea igrasiei, tratarea deseurilor periculoase, obtinut traditional in cuptor pe lemne.</li>
@@ -97,14 +124,14 @@
     </section>
 
     <!-- Recenzii -->
-    <section id="recenzii">
+    <section id="recenzii" class="panel">
         <h2>Recenzii</h2>
         <p><strong>Ion Popescu:</strong> „Varul de la BIG-MIC este de o calitate exceptionala! L-am folosit pentru renovarea casei si sunt foarte multumit de rezultate.”</p>
         <p><strong>Maria Ionescu:</strong> „Recomand cu incredere varul pastă! Este usor de folosit si are o textura fina.”</p>
     </section>
 
     <!-- Formular Recenzii -->
-    <section id="recenzii-form">
+    <section id="recenzii-form" class="panel">
         <h2>Adauga o Recenzie</h2>
         <div class="review-form">
             <h3>Scrie o recenzie</h3>
@@ -116,14 +143,30 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="panel">
         <h2>Contact</h2>
+        <p>Telefon 0758280873</p>
         <p>Email: radutzu2009@yahoo.com</p>
-        <p>Telefon: 0758280873</p>
     </section>
 
     <footer>
         <p>&copy; 2024 BIG-MIC. Toate drepturile rezervate.</p>
     </footer>
+
+    <script>
+        // Script pentru meniul de tip accordion
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
