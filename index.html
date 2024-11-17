@@ -30,7 +30,7 @@
             color: #4e342e;
         }
         .dropdown {
-            position: relative; /* Asigură că submeniul va fi poziționat corect */
+            position: relative; /* Adăugăm această linie */
         }
         .dropdown-content {
             display: none;
@@ -39,16 +39,11 @@
             padding: 10px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             position: absolute;
-            top: 100%;
+            top: 100%; /* Asigură că submeniul apare sub linkul principal */
             left: 0;
-            opacity: 0; /* Inițial, submeniul va fi invizibil */
-            transform: translateY(-20px); /* Submeniul începe mai sus */
-            transition: opacity 0.3s ease, transform 0.3s ease; /* Efecte de tranziție */
         }
         .dropdown:hover .dropdown-content {
             display: block;
-            opacity: 1; /* Submeniul devine vizibil */
-            transform: translateY(0); /* Submeniul se va mișca la locul său */
         }
         section {
             padding: 20px;
