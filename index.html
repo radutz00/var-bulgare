@@ -98,8 +98,57 @@
     <section id="produse">
         <h2>Produse</h2>
         <ul>
-            <li>Var Bulgare - Ideal pentru constructii, dezinfectat fantani, corectarea Ph sol, curatat si dezinfectat cotete animale, reducerea igrasiei, tratarea deseurilor periculoase, obtinut traditional in cuptor pe lemne.</li>
-            <li>Var Pasta - Perfect pentru gospodarie, varuitul pomilor, fresca bisericeasca.</li>
+            <section id="produse" style="padding: 40px; background-color: #f4f4f4;">
+    <h2 style="text-align: center; color: #5d4037; font-family: 'Georgia', serif;">Produsele Noastre</h2>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px;">
+        
+        <!-- Card Var Bulgare -->
+        <div style="width: 300px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
+            <img src="https://raw.githubusercontent.com/radutz00/var/main/WhatsApp%20Image%202024-11-17%20at%2001.56.32.jpeg" alt="Var Bulgare" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+            <h3 style="color: #4e342e;">Var Bulgare</h3>
+            <p style="color: #3e2723; font-size: 16px;">
+                „Imaginați-vă un material născut din natură, gata să vă ajute în cele mai diverse proiecte. Varul bulgare este un aliat puternic, potrivit pentru construcții rezistente, igienizare sau echilibrul solului. Practic și durabil, devine rapid indispensabil în gospodăria ta.”
+            </p>
+            <button onclick="showDetails('bulgare')" style="background-color: #8d6e63; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Află mai multe</button>
+        </div>
+        
+        <!-- Card Var Pasta -->
+        <div style="width: 300px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
+            <img src="https://raw.githubusercontent.com/radutz00/var/main/WhatsApp%20Image%202024-11-17%20at%2001.56.58.jpeg" alt="Var Pasta" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+            <h3 style="color: #4e342e;">Var Pasta</h3>
+            <p style="color: #3e2723; font-size: 16px;">
+                „În fiecare gospodărie, există momente când soluțiile simple sunt cele mai bune. Varul pastă, cu textura sa fină și aplicare ușoară, aduce un plus de eficiență pentru varuitul pomilor, restaurări artistice sau întreținerea curată a spațiilor.”
+            </p>
+            <button onclick="showDetails('pasta')" style="background-color: #8d6e63; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Află mai multe</button>
+        </div>
+    </div>
+
+    <!-- Detalii produse -->
+    <div id="details" style="margin-top: 40px; display: none; padding: 20px; background-color: #fffbe7; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h3 id="details-title" style="color: #4e342e;"></h3>
+        <p id="details-content" style="color: #3e2723; font-size: 16px;"></p>
+    </div>
+</section>
+
+<script>
+    function showDetails(product) {
+        const detailsSection = document.getElementById('details');
+        const detailsTitle = document.getElementById('details-title');
+        const detailsContent = document.getElementById('details-content');
+        
+        if (product === 'bulgare') {
+            detailsTitle.innerText = 'Detalii Ambalare - Var Bulgare';
+            detailsContent.innerText = 'Varul bulgare este disponibil în următoarele variante de ambalare: vrac, pungi de 5 kg sau saci de 1000 kg.';
+        } else if (product === 'pasta') {
+            detailsTitle.innerText = 'Detalii Ambalare - Var Pasta';
+            detailsContent.innerText = 'Varul pastă este ambalat în pungi de 5 kg, pungi de 10 kg, saci de 20 kg sau saci de 1 tonă.';
+        }
+        
+        detailsSection.style.display = 'block';
+        window.scrollTo({ top: detailsSection.offsetTop, behavior: 'smooth' });
+    }
+</script>
+
         </ul>
     </section>
     <section id="recenzii">
