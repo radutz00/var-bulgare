@@ -125,6 +125,35 @@
             font-size: 16px;
             color: #5d4037;
         }
+
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            overflow: auto;
+        }
+        .popup-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 400px;
+        }
+        .popup button {
+            background-color: #8d6e63;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -161,9 +190,7 @@
             <p style="font-size: 18px; color: #5d4037;">
                 Astăzi, SC Big-Mic SRL continuă să fie dedicată valorilor de calitate, tradiție și inovație. Fiecare bulgăre de var produs de noi spune o poveste despre muncă, grijă și respect față de client.
             </p>
-
-<img src="https://raw.githubusercontent.com/radutz00/var/main/WhatsApp%20Image%202024-11-17%20at%2001.56.32.jpeg" alt="Imagine tradi?ionala" style="margin-top: 20px; width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
-
+            <img src="https://raw.githubusercontent.com/radutz00/var/main/WhatsApp%20Image%202024-11-17%20at%2001.56.58.jpeg" alt="Imagine tradițională" style="margin-top: 20px; width: 50%; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
         </div>
     </section>
 
@@ -174,16 +201,14 @@
                 <img src="https://i.imgur.com/c2OMu1G.jpeg" alt="Var Bulgăre">
                 <h3>Var Bulgare</h3>
                 <p>„Imaginați-vă un material născut din natură, gata să vă ajute în cele mai diverse proiecte. Varul bulgare este un aliat puternic, potrivit pentru construcții rezistente, igienizare sau echilibrul solului. Practic și durabil, devine rapid indispensabil în gospodăria ta.”</p>
-                <button onclick="alert('Mai multe informații despre Var Bulgare')">Află mai multe</button>
+                <button onclick="openPopup('varBulgare')">Află mai multe</button>
             </div>
 
             <div class="card">
-
-<img src="https://raw.githubusercontent.com/radutz00/var/main/WhatsApp%20Image%202024-11-17%20at%2001.56.32.jpeg" alt="Imagine tradi?ionala" style="margin-top: 20px; width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
-
+                <img src="https://raw.githubusercontent.com/radutz00/var/main/WhatsApp%20Image%202024-11-17%20at%2001.56.32.jpeg" alt="Imagine tradi?ionala" style="margin-top: 20px; width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
                 <h3>Var Pastă</h3>
                 <p>„În fiecare gospodărie, există momente când soluțiile simple sunt cele mai bune. Varul pastă, cu textura sa fină și aplicare ușoară, aduce un plus de eficiență pentru varuitul pomilor, restaurări artistice sau întreținerea curată a spațiilor.”</p>
-                <button onclick="alert('Mai multe informații despre Var Pastă')">Află mai multe</button>
+                <button onclick="openPopup('varPasta')">Află mai multe</button>
             </div>
         </div>
     </section>
@@ -194,6 +219,58 @@
             <div>
                 <h3>Email</h3>
                 <p>radutzu2009@yahoo.com</p>
-                <h3>Telefon<h3>
-                 <p>0758280873 <p>
             </div>
+            <div>
+                <h3>Telefon</h3>
+                <p>0758280873</p>
+            </div>
+            <div>
+                <h3>Adresă</h3>
+                <p>SC Big-Mic SRL, Strada Barece, numar 527, Comuna Valea Mare Pravat, Judet Arges</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup pentru Var Bulgare -->
+    <div id="popupVarBulgare" class="popup">
+        <div class="popup-content">
+            <h3>Ambalare Var Bulgare</h3>
+            <p>Varul bulgare este disponibil în următoarele forme de ambalare:</p>
+            <ul>
+                <li>Vrac</li>
+                <li>Pungi de 5 kg</li>
+                <li>Saci de 1 tonă</li>
+            </ul>
+            <button onclick="closePopup('popupVarBulgare')">Închide</button>
+        </div>
+    </div>
+
+    <!-- Popup pentru Var Pastă -->
+    <div id="popupVarPasta" class="popup">
+        <div class="popup-content">
+            <h3>Ambalare Var Pastă</h3>
+            <p>Varul pastă este disponibil în următoarele forme de ambalare:</p>
+            <ul>
+                <li>Pungi de 5 kg</li>
+                <li>Pungi de 10 kg</li>
+                <li>Saci de 20 kg</li>
+                <li>Saci de 1 tonă</li>
+            </ul>
+            <button onclick="closePopup('popupVarPasta')">Închide</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SC Big-Mic SRL | Toate drepturile rezervate</p>
+    </footer>
+
+    <script>
+        function openPopup(product) {
+            document.getElementById('popup' + product).style.display = 'block';
+        }
+        function closePopup(popup) {
+            document.getElementById(popup).style.display = 'none';
+        }
+    </script>
+</body>
+</html>
