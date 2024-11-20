@@ -68,6 +68,63 @@
             font-size: 2.5rem;
             margin: 0;
         }
+        .section-header {
+            text-align: center;
+            font-size: 2rem;
+            color: #4e342e;
+            margin-bottom: 20px;
+        }
+        .card {
+            width: 300px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            margin: 20px;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            color: #4e342e;
+            margin: 10px 0;
+        }
+        .card p {
+            color: #3e2723;
+            font-size: 16px;
+        }
+        .card button {
+            background-color: #8d6e63;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #ede7e6;
+            border-radius: 10px;
+        }
+        .contact-info div {
+            width: 30%;
+            text-align: center;
+        }
+        .contact-info h3 {
+            color: #4e342e;
+        }
+        .contact-info p {
+            font-size: 16px;
+            color: #5d4037;
+        }
     </style>
 </head>
 <body>
@@ -79,8 +136,8 @@
             <a href="#">Despre Noi</a>
             <div class="dropdown-content">
                 <a href="#despre">Despre Firma</a>
+                <a href="#istorie">Povestea Noastră</a>
                 <a href="#produse">Produse</a>
-                <a href="#recenzii">Recenzii</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
@@ -91,12 +148,12 @@
     </div>
 
     <section id="despre">
-        <h2>Despre Noi</h2>
+        <h2 class="section-header">Despre Noi</h2>
         <p>La SC Big-Mic SRL, știm că nu vindem doar var – vindem încredere, siguranță și durabilitate. În fiecare bulgăre de var se ascunde o mică parte din sufletul nostru, pentru că știm că ajutăm la construirea unui viitor mai bun pentru tine și cei dragi.</p>
     </section>
 
-    <section id="istorie" style="background-color: #ede7e6; padding: 30px; text-align: center;">
-        <h2 style="font-family: 'Georgia', serif; color: #4e342e;">Povestea Noastră</h2>
+    <section id="istorie" style="background-color: #ede7e6; padding: 30px;">
+        <h2 class="section-header">Povestea Noastră</h2>
         <div style="max-width: 800px; margin: 0 auto; line-height: 1.6;">
             <p style="font-size: 18px; color: #5d4037;">
                 Totul a început cu pasiunea pentru tradiție și dorința de a oferi cele mai bune produse clienților noștri. De-a lungul anilor, am învățat că varul nu este doar un material, ci o moștenire transmisă din generație în generație. Cuptoarele noastre, încălzite pe lemne, păstrează metodele tradiționale care dau varului nostru calitatea unică.
@@ -104,43 +161,35 @@
             <p style="font-size: 18px; color: #5d4037;">
                 Astăzi, SC Big-Mic SRL continuă să fie dedicată valorilor de calitate, tradiție și inovație. Fiecare bulgăre de var produs de noi spune o poveste despre muncă, grijă și respect față de client.
             </p>
-            <img src="https://raw.githubusercontent.com/radutz00/var/main/WhatsApp%20Image%202024-11-17%20at%2001.56.58.jpeg" alt="Imagine tradițională" style="margin-top: 20px; width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
-            <img src="https://raw.githubusercontent.com/radutz00/var/main/WhatsApp%20Image%202024-11-17%20at%2001.56.32.jpeg" alt="Imagine tradițională" style="margin-top: 20px; width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+            <img src="https://raw.githubusercontent.com/radutz00/var/main/WhatsApp%20Image%202024-11-17%20at%2001.56.58.jpeg" alt="Imagine tradițională" style="margin-top: 20px; width: 50%; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
         </div>
     </section>
 
     <section id="produse">
-        <h2>Produse</h2>
-        <ul>
-            <section id="produse" style="padding: 40px; background-color: #f4f4f4;">
-                <h2 style="text-align: center; color: #5d4037; font-family: 'Georgia', serif;">Produsele Noastre</h2>
-                <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px;">
-                    <!-- Card Var Bulgare -->
-                    <div style="width: 300px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
-                        <img src="https://i.imgur.com/c2OMu1G.jpeg" alt="Imagine Var Bulgăre" style="width:100%; max-width:300px; height:auto; border-radius:10px;">
-                        <h3 style="color: #4e342e;">Var Bulgare</h3>
-                        <p style="color: #3e2723; font-size: 16px;">
-                            „Imaginați-vă un material născut din natură, gata să vă ajute în cele mai diverse proiecte. Varul bulgare este un aliat puternic, potrivit pentru construcții rezistente, igienizare sau echilibrul solului. Practic și durabil, devine rapid indispensabil în gospodăria ta.”
-                        </p>
-                        <button onclick="openModal('bulgare')" style="background-color: #8d6e63; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Află mai multe</button>
-                    </div>
+        <h2 class="section-header">Produsele Noastre</h2>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px;">
+            <div class="card">
+                <img src="https://i.imgur.com/c2OMu1G.jpeg" alt="Var Bulgăre">
+                <h3>Var Bulgare</h3>
+                <p>„Imaginați-vă un material născut din natură, gata să vă ajute în cele mai diverse proiecte. Varul bulgare este un aliat puternic, potrivit pentru construcții rezistente, igienizare sau echilibrul solului. Practic și durabil, devine rapid indispensabil în gospodăria ta.”</p>
+                <button onclick="alert('Mai multe informații despre Var Bulgare')">Află mai multe</button>
+            </div>
 
-                    <!-- Card Var Pasta -->
-                    <div style="width: 300px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
-                        <img src="https://raw.githubusercontent.com/radutz00/var/main/WhatsApp%20Image%202024-11-17%20at%2001.56.58.jpeg" alt="Var Pasta" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
-                        <h3 style="color: #4e342e;">Var Pasta</h3>
-                        <p style="color: #3e2723; font-size: 16px;">
-                            „În fiecare gospodărie, există momente când soluțiile simple sunt cele mai bune. Varul pastă, cu textura sa fină și aplicare ușoară, aduce un plus de eficiență pentru varuitul pomilor, restaurări artistice sau întreținerea curată a spațiilor.”
-                        </p>
-                        <button onclick="openModal('pasta')" style="background-color: #8d6e63; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Află mai multe</button>
-                    </div>
-                </div>
-            </section>
-        </ul>
+            <div class="card">
+                <img src="https://raw.githubusercontent.com/radutz00/var/main/WhatsApp%20Image%202024-11-17%20at%2001.56.58.jpeg" alt="Var Pasta">
+                <h3>Var Pastă</h3>
+                <p>„În fiecare gospodărie, există momente când soluțiile simple sunt cele mai bune. Varul pastă, cu textura sa fină și aplicare ușoară, aduce un plus de eficiență pentru varuitul pomilor, restaurări artistice sau întreținerea curată a spațiilor.”</p>
+                <button onclick="alert('Mai multe informații despre Var Pastă')">Află mai multe</button>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 SC Big-Mic SRL | Toate drepturile rezervate</p>
-    </footer>
-</body>
-</html>
+    <section id="contact">
+        <h2 class="section-header">Contact</h2>
+        <div class="contact-info">
+            <div>
+                <h3>Email</h3>
+                <p>radutzu2009@yahoo.com</p>
+                <h3>Telefon<h3>
+                 <p>0758280873 <p>
+            </div>
