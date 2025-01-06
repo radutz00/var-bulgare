@@ -153,7 +153,20 @@
             padding: 10px;
             border-radius: 5px;
             cursor: pointer;
-        }
+            
+        }@media (max-width: 768px) {
+    .contact-info {
+        display: flex;
+        flex-direction: column; /* Plasează elementele pe verticală */
+        align-items: center; /* Centrează elementele pe orizontală */
+        padding: 10px;
+    }
+    .contact-info div {
+        width: 100%; /* Fiecare element va ocupa întreaga lățime disponibilă */
+        text-align: center;
+        margin-bottom: 15px; /* Adaugă un spațiu între elemente */
+    }
+}
     </style>
 </head>
 <body>
@@ -231,7 +244,7 @@
             
             <div>
                 <h3>Adresa</h3>
-                <p>SC Big-Mic SRL, Strada Barece, numar 527, Comuna Valea Mare Pravat, Judet Arges</p>
+                <p>SC Big-Mic SRL, Strada Barace, numar 527, Comuna Valea Mare Pravat, Judet Arges</p>
             </div>
         </div>
     </section>
